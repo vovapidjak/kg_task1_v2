@@ -14,7 +14,10 @@ public class DrawPanel extends JPanel {
         super.paint(gr);
 
         Graphics2D g = (Graphics2D) gr;
-        Human h = new Human(600,1000,Color.BLACK);
+
+
+
+        Human h = new Human(300,500,Color.YELLOW);
 
         h.drawHuman(g);
 

@@ -42,14 +42,14 @@ public class Human extends JPanel{
     public void drawHuman(Graphics2D g2d){
 
         // хитбокс
-        g2d.setStroke(new BasicStroke(10));
-        g2d.drawLine(0,0,width,0);
-        g2d.drawLine(0,0,0,height);
-        g2d.drawLine(width,0,width,height);
-        g2d.drawLine(width,height,0,height);
+//        g2d.setStroke(new BasicStroke(10));
+//        g2d.drawLine(0,0,width,0);
+//        g2d.drawLine(0,0,0,height);
+//        g2d.drawLine(width,0,width,height);
+//        g2d.drawLine(width,height,0,height);
 
 
-        g2d.setStroke(new BasicStroke(2));
+
         g2d.setColor(color);
 
         //башка (без ржавого)
@@ -60,6 +60,13 @@ public class Human extends JPanel{
         //полигон
 
         g2d.fillPolygon(new int[] {width/6, width*2/6,width*4/6, width*5/6}, new int[] {height/5,height*3/5, height*3/5, height/5 }, 4);
+
+        // границы чубрика
+
+        g2d.setStroke(new BasicStroke(4));
+        g2d.setColor(Color.BLACK);
+        g2d.drawOval(width/2 - width/12,0,width/5, height/5);
+
 
         //туловище
 
