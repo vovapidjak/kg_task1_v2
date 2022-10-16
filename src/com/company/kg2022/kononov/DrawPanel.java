@@ -5,12 +5,21 @@ import java.awt.*;
 
 public class DrawPanel extends JPanel {
 
-    @Override
-    public void paint(Graphics g) {
-        super.paint(g);
-    }
-
     public DrawPanel() {
 
     }
+
+    @Override
+    public void paint(Graphics gr) {
+        super.paint(gr);
+
+        Graphics2D g = (Graphics2D) gr;
+        Human h = new Human(600,800,Color.BLACK);
+
+        h.drawHuman(g);
+
+
+    }
+
+
 }
