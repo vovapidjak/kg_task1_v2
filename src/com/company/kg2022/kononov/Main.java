@@ -9,7 +9,7 @@ public class Main {
 
         MainWindow mw = new MainWindow();
         mw.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        mw.setSize(600,800);
+        mw.setSize(1920,1080);
         mw.setVisible(true);
 
     }
