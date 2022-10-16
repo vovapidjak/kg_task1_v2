@@ -17,7 +17,7 @@ public class DrawPanel extends JPanel {
 
 
 
-        Human h = new Human(300,500,Color.YELLOW);
+        Human h = new Human(500,500,300,500,Color.YELLOW);
 
         h.drawHuman(g);
 
