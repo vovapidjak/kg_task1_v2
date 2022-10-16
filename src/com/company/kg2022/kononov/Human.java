@@ -40,6 +40,8 @@ public class Human extends JPanel{
     }
 
     public void drawHuman(Graphics2D g2d){
+
+        // хитбокс
         g2d.setStroke(new BasicStroke(10));
         g2d.drawLine(0,0,width,0);
         g2d.drawLine(0,0,0,height);
@@ -52,7 +54,12 @@ public class Human extends JPanel{
 
         //башка (без ржавого)
 
-        g2d.fillOval(width/2 - width/12,0,width/5, width/5);
+        g2d.fillOval(width/2 - width/12,0,width/5, height/5);
+
+
+        //полигон
+
+        g2d.fillPolygon(new int[] {width/6, width*2/6,width*4/6, width*5/6}, new int[] {height/5,height*3/5, height*3/5, height/5 }, 4);
 
         //туловище
 
@@ -62,6 +69,19 @@ public class Human extends JPanel{
         g2d.drawLine(width/6, height/5,width*2/6, height*3/5); //левая палка туловища
         g2d.drawLine(width*5/6, height/5,width*4/6, height*3/5); //нижняя палка туловища
 
+        //руки
+
+        g2d.drawLine(width/6, height/5, width/6, height*3/5);
+        g2d.drawLine(width*5/6, height/5, width*5/6, height*3/5);
+
         // ноги
+
+        g2d.drawLine(width*2/6, height*3/5, (int)(width*1.5/6), height*4/5); // от туловища до колена слева
+        g2d.drawLine(width*4/6, height*3/5, (int)(width*3*1.5/6), height*4/5); // от туловища до колена справа
+
+        g2d.drawLine((int)(width*1.5/6),height*4/5, (int)(width*1.5/6),height); // от колена справа до пола
+        g2d.drawLine((int)(width*3*1.5/6),height*4/5, (int)(width*3*1.5/6),height); // от колена слева до пола
+
+
     }
 }
